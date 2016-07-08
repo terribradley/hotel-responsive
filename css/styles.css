@@ -184,6 +184,9 @@ footer img {
       -moz-border-radius: 2px;
       border-radius: 2px;
     }
+    .masthead h1 {
+      padding-top: 20vh;
+    }
     .highlight-one:before, .highlight-one:after {
       content: "";
       display: block;
@@ -211,4 +214,12 @@ footer img {
       /*margin-left: 1%;*/
       font-size: .9em;
     }
+}
+
+@media screen and (min-width: 870px) {
+  .masthead h1 {
+    padding-top: 20vh;
+  }
+
+
 }
