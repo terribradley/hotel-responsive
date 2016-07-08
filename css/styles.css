@@ -11,7 +11,6 @@ h1, h2, h3, h4 {
   margin: 0;
 }
 /*nav*/
-
 header {
     background: #1c1c1c;
     padding: 15px 20px;
@@ -27,64 +26,6 @@ header:after {
 header {
     zoom:1;
 }
-/*********mastehead*****/
-.masthead {
-  height: 30vh;
-  background-image: url(../img/masthead.jpg);
-
-}
-.masthead h1 {
-  margin: 0;
-  padding-top: 20vh;
-  font-size: 4em;
-  text-align: right;
-  color: white;
-  font-family: 'Montserrat Subrayada', sans-serif;
-}
-/********content******/
-.main-content {
-  font-size: 1.1em;
-  margin: 4% 3% 3% 3%;
-  font-family: 'Roboto Condensed', sans-serif;
-}
-.main-content h2 {
-  font-size: 1.8em;
-  font-family: 'Montserrat', sans-serif;
-}
-.learn {
-  text-align: right;
-  font-size: 1.4em;
-}
-.intro {
-  padding: 0 2% 0 2%;
-  border-left: 6px solid black;
-}
-.highlight-one-image {
-  margin-bottom: 4%;
-}
-.highlight-one-image img {
-  width: 90%;
-  margin-left: 5%;
-}
-.highlight-one-text, .highlight-two-text {
-  border-left: 6px solid black;
-  padding: 0 2% 0 2%;
-}
-footer {
-  height: 10%;
-  background-color: #dcdbda;
-  text-align: center;
-  font-size: .8em;
-  font-family: 'Roboto Condensed', sans-serif;
-}
-footer img {
-  padding-top: 4%;
-  width: 30%;
-}
-/**********************************media**********************/
-
-@media (max-width: 550px) {
-  /*******top nav style*******/
 .logo {
     color: #fff;
     text-decoration: none;
@@ -125,7 +66,6 @@ footer img {
     background: #1c1c1c;
     padding: 5px 0;
 }
-
 #primary-nav li a {
     display: block;
     padding: 0 20px;
@@ -139,24 +79,33 @@ footer img {
     height: 2em;
     border-bottom: 1px solid #383838;
 }
-
 #primary-nav li:last-child a {
     border-bottom: none;
 }
-
 #primary-nav li a:hover,
 #primary-nav li a:focus {
     color: #1c1c1c;
     background: #ccc;
 }
 /*********masthead********/
+body {
+  background-color: #F2F2F2;
+}
+/*********mastehead*****/
+.masthead {
+  height: 30vh;
+  background-image: url(../img/masthead.jpg);
+}
 .masthead h1 {
   margin: 0;
-  padding-top: 25vh;
-  font-size: 3em;
+  padding-top: 23vh;
+  font-size: 10vw;
+  color: #471330;
   text-align: right;
+  padding-right: 2%;
   font-family: 'Montserrat Subrayada', sans-serif;
 }
+/********content******/
 .main-content {
   font-size: 1.1em;
   margin: 4% 3% 3% 3%;
@@ -170,13 +119,30 @@ img {
   width: 90%;
   margin-left: 5%;
 }
+.learn {
+  text-align: right;
+  font-size: 1.4em;
+  color: #750B45;
+}
 .intro {
   padding: 0 2% 0 2%;
-  border-left: 6px solid black;
+  border-left: 6px solid #750B45;
+}
+.intro h4 {
+  color: #8A8870;
 }
 .highlight-one-image {
   margin-bottom: 4%;
 }
+.highlight-one-image img {
+  width: 90%;
+  margin-left: 5%;
+}
+.highlight-one-text, .highlight-two-text {
+  border-left: 6px solid black;
+  padding: 0 2% 0 2%;
+}
+/****************footer*/
 footer {
   padding-top: 5%;
   height: 130px;
@@ -189,6 +155,46 @@ footer img {
   padding-top: 4%;
   width: 30%;
 }
+@media screen and (min-width:768px) {
+  /**************nav***********/
+   header .to-nav {
+       display: none;
+   }
+   #primary-nav .top {
+    display: none;
+}
+   .container {
+        position: relative;
+        width: 768px;
+        margin: auto;
+    }
+    #primary-nav {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        background: none;
+    }
 
+    #primary-nav li {
+        display: inline;
+    }
 
+    #primary-nav li a {
+        float: right;
+        border: none;
+        padding: 0 10px;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        border-radius: 2px;
+    }
+    .highlight-one-image img {
+      width: 200px;
+      margin-left: 5%;
+      float: left;
+    }
+
+    .highlight-one-text {
+      width: 45%;
+      float: left;
+    }
 }
