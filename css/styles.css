@@ -155,7 +155,7 @@ footer img {
   padding-top: 4%;
   width: 30%;
 }
-@media screen and (min-width:768px) {
+@media screen and (min-width: 768px) {
   /**************nav***********/
    header .to-nav {
        display: none;
@@ -164,37 +164,51 @@ footer img {
     display: none;
 }
    .container {
-        position: relative;
-        width: 768px;
-        margin: auto;
+      position: relative;
     }
     #primary-nav {
-        position: absolute;
-        top: 5px;
-        right: 10px;
-        background: none;
+      position: absolute;
+      top: 5px;
+      right: 10px;
+      background: none;
     }
 
     #primary-nav li {
-        display: inline;
+      display: inline;
     }
-
     #primary-nav li a {
-        float: right;
-        border: none;
-        padding: 0 10px;
-        -webkit-border-radius: 2px;
-        -moz-border-radius: 2px;
-        border-radius: 2px;
+      float: right;
+      border: none;
+      padding: 0 10px;
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      border-radius: 2px;
+    }
+    .highlight-one:before, .highlight-one:after {
+      content: "";
+      display: block;
+    }
+    .highlight-one:after {
+      clear: both;
+    }
+    .highlight-one {
+      padding-top: 10px;
+      margin-bottom: 5%;
     }
     .highlight-one-image img {
-      width: 200px;
-      margin-left: 5%;
+
+      width: 50%;
+      margin: 0;
       float: left;
+      border-right: 6px solid black;
+      padding-right: 3%;
     }
 
     .highlight-one-text {
-      width: 45%;
-      float: left;
+      border: none;
+      width: 50%;
+      float: right;
+      /*margin-left: 1%;*/
+      font-size: .9em;
     }
 }
