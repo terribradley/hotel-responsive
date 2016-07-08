@@ -73,6 +73,7 @@ header {
     text-decoration: none;
     font-weight: bold;
     text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
     letter-spacing: 0.1em;
     letter-spacing: 0.1em;
     line-height: 2em;
@@ -95,12 +96,16 @@ body {
 .masthead {
   height: 30vh;
   background-image: url(../img/masthead.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
 }
 .masthead h1 {
   margin: 0;
   padding-top: 23vh;
-  font-size: 10vw;
+  font-size: 8vw;
   color: #471330;
+  text-shadow: 3px 4px 3px #8A8870;
   text-align: right;
   padding-right: 2%;
   font-family: 'Montserrat Subrayada', sans-serif;
@@ -124,14 +129,20 @@ img {
   font-size: 1.4em;
   color: #750B45;
 }
+.learn:hover {
+  color: #8A8870;
+}
 .intro {
   padding: 0 2% 0 2%;
   border-left: 6px solid #750B45;
 }
+.intro p:first-of-type {
+  display: none;
+}
 .intro h4 {
   color: #8A8870;
 }
-.highlight-one-image {
+.highlight-one-image, .highlight-two-image {
   margin-bottom: 4%;
 }
 .highlight-one-image img {
@@ -144,82 +155,129 @@ img {
 }
 /****************footer*/
 footer {
-  padding-top: 5%;
-  height: 130px;
-  background-color: #dcdbda;
+  padding-top: 2%;
+  padding-bottom: 10%;
+  height: 150px;
   text-align: center;
+  background-color: #dcdbda;
   font-size: .8em;
   font-family: 'Roboto Condensed', sans-serif;
 }
 footer img {
-  padding-top: 4%;
-  width: 30%;
+  margin: 0;
+  padding-top: 2%;
+  width: 20%;
+}
+form {
+  padding-top: 2%;
+}
+.button:hover {
+  background-color: #8A8870;
 }
 @media screen and (min-width: 768px) {
   /**************nav***********/
-   header .to-nav {
-       display: none;
-   }
-   #primary-nav .top {
+  header .to-nav {
     display: none;
+  }
+  #primary-nav .top {
+    display: none;
+  }
+  .container {
+    position: relative;
+  }
+  #primary-nav {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    background: none;
+  }
+
+  #primary-nav li {
+    display: inline;
+  }
+  #primary-nav li a {
+    float: right;
+    border: none;
+    padding: 0 10px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+  }
+  .masthead h1 {
+    font-size: 6vw;
+  }
+  .intro p:first-of-type {
+    display: block;
+  }
+  .highlight-one:before, .highlight-one:after, .highlight-two:before, .highlight-two:after {
+    content: "";
+    display: block;
+  }
+  .highlight-one:after, .highlight-two:after {
+    clear: both;
+  }
+  .highlight-one {
+    padding-top: 10px;
+    margin-bottom: 5%;
+  }
+  .highlight-one-image img {
+    width: 50%;
+    margin: 0;
+    float: left;
+    border-right: 6px solid black;
+    padding-right: 3%;
+  }
+  .highlight-one-text {
+    border: none;
+    width: 50%;
+    float: right;
+    font-size: .9em;
+  }
+  .highlight-two {
+    margin-bottom: 10%;
+  }
+  .highlight-two-image img {
+    float: right;
+    width: 50%;
+    margin: 0;
+    border-left: 6px solid black;
+    padding-left: 3%;
+  }
+  .highlight-two-text {
+    float: left;
+    border: none;
+    width: 50%;
+    font-size: .9em;
+  }
+  }
+@media screen and (min-width: 849px) {
+  footer form {
+    text-align: left;
+    display: inline;
+    padding-right: 2%;
+  }
+  footer img {
+    margin: 0;
+    width: 15%;
+  }
 }
-   .container {
-      position: relative;
-    }
-    #primary-nav {
-      position: absolute;
-      top: 5px;
-      right: 10px;
-      background: none;
-    }
-
-    #primary-nav li {
-      display: inline;
-    }
-    #primary-nav li a {
-      float: right;
-      border: none;
-      padding: 0 10px;
-      -webkit-border-radius: 2px;
-      -moz-border-radius: 2px;
-      border-radius: 2px;
-    }
-    .masthead h1 {
-      padding-top: 20vh;
-    }
-    .highlight-one:before, .highlight-one:after {
-      content: "";
-      display: block;
-    }
-    .highlight-one:after {
-      clear: both;
-    }
-    .highlight-one {
-      padding-top: 10px;
-      margin-bottom: 5%;
-    }
-    .highlight-one-image img {
-
-      width: 50%;
-      margin: 0;
-      float: left;
-      border-right: 6px solid black;
-      padding-right: 3%;
-    }
-
-    .highlight-one-text {
-      border: none;
-      width: 50%;
-      float: right;
-      /*margin-left: 1%;*/
-      font-size: .9em;
-    }
+@media screen and (min-width: 1400px) {
+  .masthead {
+    height: 40vh;
+  }
+  .masthead h1 {
+    padding-top: 26vh;
+  }
+  .main-content {
+    width: 70vw;
+    margin: 5vh 15vw 0 15vw;
+  }
 }
 
-@media screen and (min-width: 870px) {
+/*@media screen and (min-width: 870px) {
   .masthead h1 {
     padding-top: 20vh;
   }
 
 
-}
+}*/
